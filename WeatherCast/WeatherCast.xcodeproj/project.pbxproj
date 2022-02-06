@@ -13,6 +13,11 @@
 		1C2DE77B27AD8D9F007B59E8 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C2DE77A27AD8D9F007B59E8 /* Preview Assets.xcassets */; };
 		1C2DE78627AD8D9F007B59E8 /* WeatherCastTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE78527AD8D9F007B59E8 /* WeatherCastTests.swift */; };
 		1C2DE79127AD8D9F007B59E8 /* WeatherCastUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE79027AD8D9F007B59E8 /* WeatherCastUITests.swift */; };
+		1C2DE7A327AEB4E0007B59E8 /* WebServiceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE7A227AEB4E0007B59E8 /* WebServiceManager.swift */; };
+		1C2DE7AB27AEBC28007B59E8 /* OpenWeatherWebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE7AA27AEBC27007B59E8 /* OpenWeatherWebService.swift */; };
+		1C2DE7B127AEC60F007B59E8 /* OpenWeatherMapData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE7B027AEC60F007B59E8 /* OpenWeatherMapData.swift */; };
+		1C2DE7BE27AECB76007B59E8 /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C2DE7BD27AECB76007B59E8 /* WeatherViewModel.swift */; };
+		1C755D2927AEDD9D001F1DD7 /* WeatherStackWebservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C755D2827AEDD9D001F1DD7 /* WeatherStackWebservice.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,11 @@
 		1C2DE78C27AD8D9F007B59E8 /* WeatherCastUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeatherCastUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C2DE79027AD8D9F007B59E8 /* WeatherCastUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCastUITests.swift; sourceTree = "<group>"; };
 		1C2DE79227AD8DA0007B59E8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1C2DE7A227AEB4E0007B59E8 /* WebServiceManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebServiceManager.swift; sourceTree = "<group>"; };
+		1C2DE7AA27AEBC27007B59E8 /* OpenWeatherWebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherWebService.swift; sourceTree = "<group>"; };
+		1C2DE7B027AEC60F007B59E8 /* OpenWeatherMapData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapData.swift; sourceTree = "<group>"; };
+		1C2DE7BD27AECB76007B59E8 /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		1C755D2827AEDD9D001F1DD7 /* WeatherStackWebservice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherStackWebservice.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +105,10 @@
 		1C2DE77227AD8D94007B59E8 /* WeatherCast */ = {
 			isa = PBXGroup;
 			children = (
+				1C2DE7B927AECB32007B59E8 /* View */,
+				1C2DE7B827AECB21007B59E8 /* ViewModel */,
+				1C2DE7A127AEB4C4007B59E8 /* Model */,
 				1C2DE77327AD8D94007B59E8 /* WeatherCastApp.swift */,
-				1C2DE77527AD8D94007B59E8 /* ContentView.swift */,
 				1C2DE77727AD8D9F007B59E8 /* Assets.xcassets */,
 				1C2DE77C27AD8D9F007B59E8 /* Info.plist */,
 				1C2DE77927AD8D9F007B59E8 /* Preview Content */,
@@ -128,6 +140,41 @@
 				1C2DE79227AD8DA0007B59E8 /* Info.plist */,
 			);
 			path = WeatherCastUITests;
+			sourceTree = "<group>";
+		};
+		1C2DE7A127AEB4C4007B59E8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DE7AF27AEC5F5007B59E8 /* JSONMappers */,
+				1C2DE7A227AEB4E0007B59E8 /* WebServiceManager.swift */,
+				1C2DE7AA27AEBC27007B59E8 /* OpenWeatherWebService.swift */,
+				1C755D2827AEDD9D001F1DD7 /* WeatherStackWebservice.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		1C2DE7AF27AEC5F5007B59E8 /* JSONMappers */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DE7B027AEC60F007B59E8 /* OpenWeatherMapData.swift */,
+			);
+			path = JSONMappers;
+			sourceTree = "<group>";
+		};
+		1C2DE7B827AECB21007B59E8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DE7BD27AECB76007B59E8 /* WeatherViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		1C2DE7B927AECB32007B59E8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				1C2DE77527AD8D94007B59E8 /* ContentView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,7 +307,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C2DE77627AD8D94007B59E8 /* ContentView.swift in Sources */,
+				1C2DE7BE27AECB76007B59E8 /* WeatherViewModel.swift in Sources */,
 				1C2DE77427AD8D94007B59E8 /* WeatherCastApp.swift in Sources */,
+				1C2DE7A327AEB4E0007B59E8 /* WebServiceManager.swift in Sources */,
+				1C2DE7AB27AEBC28007B59E8 /* OpenWeatherWebService.swift in Sources */,
+				1C755D2927AEDD9D001F1DD7 /* WeatherStackWebservice.swift in Sources */,
+				1C2DE7B127AEC60F007B59E8 /* OpenWeatherMapData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
